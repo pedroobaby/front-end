@@ -1,0 +1,278 @@
+body{
+  background-color: rgb(19, 19, 19);
+  text-decoration-color: #052c65;
+}
+
+
+
+.cabecalho {
+    width: 100%;
+    height: 450px; /* altura ideal, ajustável */
+    background-image: url("imagens/banner\ 2.png");
+    background-size: cover;        /* imagem cobre toda a área */
+    background-position:  center 50%;   /* centraliza o foco */
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;        /* centraliza horizontalmente */
+    align-items: flex-end;          /* menu fica NA PARTE DE BAIXO */
+    padding-bottom: 25px;           /* espaço entre o menu e o fim do banner */
+}
+
+/* Links */
+.menu-links {
+    display: flex;
+    gap: 250px;                      /* espaço entre os links */
+}
+
+.menu-links a {
+    color: rgb(43, 68, 167);                   /* melhor visual com banner */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+/* Espaço natural abaixo do banner */
+.holographic-container {
+    margin-top: 40px;
+}
+
+
+/* CONTAINER */
+.holographic-container{
+  display:flex;
+  justify-content: left;
+  align-items: left;
+  height: 100vh;
+  padding-top: 10px;
+}
+
+/* CARD VERTICAL PARA FOTO DE PESSOA */
+.holographic-card {
+  width: 400px;       /* largura equilibrada */
+  height: 450px;      /* altura ideal para rosto/corpo */
+  background: #111;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+/* AQUI A MÁGICA: FOTO PERFEITA */
+.holographic-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* mantém proporção sem distorcer */
+  object-position: center top; /* foca no rosto */
+  border-radius: inherit;
+  z-index: 2;
+}
+
+/* EFEITO HOLOGRÁFICO */
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%, 
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+
+.hbtn {
+      position: relative;
+      box-sizing: border-box;
+      display: inline-block;
+      overflow: hidden;
+      padding: 8px 20px;
+      margin: 0px 3px 6px;
+      text-align: center;
+      border: 2px solid rgb(18, 18, 18);
+      text-decoration: none;
+      color: rgb(11, 11, 11);
+      white-space: nowrap;
+      z-index: 0;
+} 
+ 
+
+.hbtn i {
+      padding-right: 0px;
+} 
+ 
+
+.hb-fill-top-bg-br::before {
+      position: absolute;
+      content: "";
+      background: rgb(58, 10, 228);
+      transition-duration: 0.3s;
+      z-index: -1;
+      inset: auto auto 0px 0px;
+      width: 100%;
+      height: 0px;
+      opacity: 1;
+      border: 2px solid rgb(255, 255, 255);
+} 
+ 
+
+.hb-fill-top-bg-br:hover::before {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+} 
+ 
+
+.hb-fill-top-bg-br:hover {
+      color: rgb(0, 0, 0);
+      background: rgb(0, 0, 0);
+      transition: 0.3s;
+} 
+ 
+.rodape {
+    background-color: #f3efe8; /* bege quase branco */
+    padding: 40px 0 20px;
+    border-top: 1px solid #d8d6cf;
+    margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.rodape-coluna h3,
+.rodape-coluna h4 {
+    color: #052c65; /* azul sofisticado */
+    margin-bottom: 10px;
+}
+
+.rodape-coluna p,
+.rodape-coluna a {
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.rodape-coluna a:hover {
+    color: #052c65;
+    text-decoration: underline;
+}
+
+.rodape-copy {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    padding: 15px 0 0;
+    border-top: 2px solid #fcfcfc;
+}
+  
+.section-principal {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 0 20px;
+  color: #f5f5f5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.texto-principal h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #f8f9fa;
+}
+
+.texto-principal h3 {
+  font-size: 22px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #cdd8ff;
+}
+
+.texto-principal p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Ajuste para a seção de texto geral (Serviços / História) */
+.section-texto {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px 10px 20px;
+  color: #f5f5f5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.section-texto h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #e9ecef;
+}
+
+.section-texto p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.section-texto ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.section-texto li {
+  margin-bottom: 5px;
+}
+
+
+.slide1 {
+    width: 40px;        
+    height: 40px;       
+    object-fit: cover;  
+    border-radius: 8px; 
+    margin-bottom: 10px;
+
+}
+.slide2 .content img {
+    width: 40px;        
+    height: 40px;     
+    object-fit: cover;  
+    border-radius: 8px; 
+    margin-bottom: 10px;
+}
