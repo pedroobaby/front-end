@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bem-vindo — Projeto Front-end</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="noindex">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:#f5f7fb; color:#1b1f23; }
+    .card { background:#fff; padding:24px; border-radius:10px; box-shadow:0 6px 20px rgba(20,30,50,0.08); max-width:720px; width:94%; text-align:left; }
+    h1 { margin:0 0 8px 0; font-size:1.4rem; }
+    p { margin:0 0 16px 0; color:#4b5563; }
+    .links a { display:inline-block; margin:6px 8px 0 0; padding:8px 12px; background:#eef5ff; color:#0b4ea2; border-radius:8px; text-decoration:none; font-weight:600; }
+    .small { font-size:.85rem; color:#6b7280; margin-top:14px; }
+  </style>
+
+  <script>
+    // Tenta redirecionar para Fernando.html (página principal do repo)
+    // Se preferir outra página, altere o destino abaixo.
+    (function(){
+      var destino = 'Fernando.html';
+      // Delay pequeno para permitir que o usuário veja a mensagem caso o destino não exista
+      setTimeout(function(){
+        try { window.location.replace(destino); } catch(e) {}
+      }, 350);
+    })();
+  </script>
+</head>
+<body>
+  <div class="card" role="main">
+    <h1>Abrindo o site...</h1>
+    <p>Se o redirecionamento não ocorrer automaticamente, clique em uma das páginas abaixo:</p>
+
+    <div class="links" aria-label="Links para páginas">
+      <a href="Fernando.html">Fernando</a>
+      <a href="historia.html">História</a>
+      <a href="servico.html">Serviço</a>
+      <a href="redes_sociais.html">Redes Sociais</a>
+    </div>
+
+    <p class="small">Observação: este index pressupõe que os arquivos acima estejam na raiz do repositório e que <code>style.css</code> também exista (já presente no repositório).</p>
+  </div>
+</body>
+</html>
